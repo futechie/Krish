@@ -1,0 +1,16 @@
+CREATE TABLE `users` (
+  `Uid` int(11) NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `RoleId` varchar(20) NOT NULL,
+  `EmailId` varchar(25) DEFAULT NULL,
+  `Password` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `messagemaster` (
+  `Chatid` int(11) NOT NULL,
+  `Senderid` int(11) NOT NULL,
+  `receiverid` int(11) NOT NULL,
+  `groupid` int(11) NOT NULL,
+  `jsonid` varchar(20) NOT NULL,
+  `createdDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
